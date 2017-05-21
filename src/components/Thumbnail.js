@@ -6,12 +6,19 @@ const Thumbnail = ({ url, titleText, accentColor, style }) => {
   const imageStyle = {
     backgroundColor: '${accentColor}77' // adds transparency to the color
   };
+  const TitleComponent = <Title style={styles.title}>{titleText}</Title>;
 
   return(
     <View stlye={[styles.container, { borderColor: accentColor }, style]}>
-      <Image style={[styles.image]} source={{ uri: url }}>
-        <Title style={styles.title}>{titleText}</Title>
-      </Image>
+      {url.length > 0 ? ( // Article might not have an image
+        <Image style={[styles.image]} source={{ uri: url }}>
+          <Title style={styles.title}>{titleText}</Title>
+        </Image>
+      ) : ( // continuation of article not having an image
+        <View style={[styles.image, imageStyle]}>
+          {TitleComponent}
+        </View>
+      )}
     </View>
   );
 };
