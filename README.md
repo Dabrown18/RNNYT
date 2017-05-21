@@ -1,2 +1,2 @@
 ## NEWS FEED APPLICATION
-Application showing how needs feeds similar to Facebook are designed.
+Application showing how news feeds similar to Facebook are designed.
