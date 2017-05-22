@@ -10,15 +10,9 @@ const Thumbnail = ({ url, titleText, accentColor, style }) => {
 
   return(
     <View stlye={[styles.container, { borderColor: accentColor }, style]}>
-      {url.length > 0 ? ( // Article might not have an image
         <Image style={[styles.image]} source={{ uri: url }}>
           <Title style={styles.title}>{titleText}</Title>
         </Image>
-      ) : ( // continuation of article not having an image
-        <View style={[styles.image, imageStyle]}>
-          {TitleComponent}
-        </View>
-      )}
     </View>
   );
 };

@@ -15,6 +15,7 @@ export default class NewsItem extends Component {
       date,
       location,
       description,
+      onPress
     } = this.props;
 
     const accentColor = globalStyles.ACCENT_COLORS[
@@ -22,7 +23,7 @@ export default class NewsItem extends Component {
     ];
 
     return (
-      <TouchableOpacity style={style}>
+      <TouchableOpacity style={style} onPress={onPress}>
         <View>
           <Thumbnail
             url={imageUrl}
@@ -51,7 +52,7 @@ NewsItem.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string,
   date: PropTypes.instanceOf(Date).isRequired,
-  author: PropTypes.string.isRequired;
+  author: PropTypes.string.isRequired,
   location: PropTypes.string,
   index: PropTypes.number.isRequired,
   onPress: PropTypes.func.isRequired,
