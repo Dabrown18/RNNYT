@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
     fontFamily: 'HelveticaNeue-CondensedBold',
     fontSize: 18,
     color: globalStyles.HEADER_TEXT_COLOR,
-    backgroundColor: '#89b2e0'
+    backgroundColor: '#4ee6cd'
   }
 });
 

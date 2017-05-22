@@ -1,6 +1,8 @@
 import React, { Component, PropTypes } from 'react';
-import { ListView, StyleSheet, View, Modal } from 'react-native';
+import { ListView, StyleSheet, View, Modal, TouchableOpacity, WebView } from 'react-native';
 import * as globalStyles from '../styles/global';
+import SmallText from './SmallText';
+import NewsItem from './NewsItem';
 
 export default class NewsFeed extends Component {
 
@@ -22,6 +24,7 @@ export default class NewsFeed extends Component {
   renderModal() {
     return (
       <Modal
+        animationType="slide"
         visible={this.state.modalVisible}
         onRequestClose={this.onModalClose}
       >
@@ -32,6 +35,10 @@ export default class NewsFeed extends Component {
           >
             <SmallText>Close</SmallText>
           </TouchableOpacity>
+          <WebView
+            scalesPageToFit
+            source={{ uri: this.state.modalUrl }} //Opens webpage
+          />
         </View>
       </Modal>
     );
@@ -39,7 +46,8 @@ export default class NewsFeed extends Component {
 
   onModalOpen() {
     this.setState({
-      modalVisible: true
+      modalVisible: true,
+      modalUrl: url
     });
   }
 
@@ -53,7 +61,7 @@ export default class NewsFeed extends Component {
     const index = parseInt(rest[1], 10);
     return(
       <NewsItem
-        onPress={() => this.onModalOpen()}
+        onPress={() => this.onModalOpen(rowData.url)}
         style={styles.newsItem}
         index={index}
         {...rowData}
@@ -102,5 +110,16 @@ NewsFeed.defaultProps = {
 const styles = StyleSheet.create({
   newsItem: {
     marginBottom: 20
+  },
+  modalContent: {
+    flex: 1,
+    justifyContent: 'center',
+    paddingTop: 20,
+    backgroundColor: globalStyles.BG_COLOR
+  },
+  closeButton: {
+    paddingVertical: 5,
+    paddingHorizontal: 10,
+    flexDirection: 'row'
   }
 });
