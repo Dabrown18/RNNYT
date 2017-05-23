@@ -5,7 +5,7 @@ import Search from './Search';
 import * as globalStyles from '../styles/global';
 
 // Set the status bar for iOS to light
-StatusBar.setBarStyle('light-content');
+StatusBar.setBarStyle('default');
 
 export default class HomeScreen extends Component {
 
@@ -52,7 +52,7 @@ export default class HomeScreen extends Component {
         <TabBarIOS.Item
           systemIcon={'bookmarks'}
           selected={this.state.tab === 'bookmarks'}
-          onPress={() => this.setState({ tab: 'bookmarks'})}
+          onPress={() => this.showBookmarkAlert()}
         >
           <Text>Bookmarks</Text>
         </TabBarIOS.Item>
