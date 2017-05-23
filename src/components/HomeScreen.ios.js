@@ -1,7 +1,11 @@
 import React, { Component, PropTypes } from 'react';
-import { TabBarIOS, Text } from 'react-native';
+import { TabBarIOS, Text, Alert, Vibration, StatusBar } from 'react-native';
 import NewsFeed from './NewsFeed';
+import Search from './Search';
 import * as globalStyles from '../styles/global';
+
+// Set the status bar for iOS to light
+StatusBar.setBarStyle('light-content');
 
 export default class HomeScreen extends Component {
 
@@ -10,6 +14,17 @@ export default class HomeScreen extends Component {
     this.state = {
       tab: 'newsFeed'
     }
+  }
+
+  showBookmarkAlert() {
+    Vibration.vibrate();
+    Alert.alert(
+      'Coming Soon',
+      'We are hard at work on this feature, check back in the near future.',
+      [
+        { text: 'OK', onPress: () => console.log('User pressed OK') }
+      ]
+    );
   }
 
   render() {
@@ -32,7 +47,7 @@ export default class HomeScreen extends Component {
           selected={this.state.tab === 'search'}
           onPress={() => this.setState({ tab: 'search'})}
         >
-          {/* <Search /> The search page has not been loaded */}
+          <Search />
         </TabBarIOS.Item>
         <TabBarIOS.Item
           systemIcon={'bookmarks'}
