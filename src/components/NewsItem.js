@@ -3,6 +3,7 @@ import { View, TouchableOpacity, StyleSheet, ActionSheetIOS } from 'react-native
 import Byline from './Byline';
 import AppText from './AppText';
 import Thumbnail from './Thumbnail';
+import Card from './Card';
 import * as globalStyles from '../styles/global';
 
 export default class NewsItem extends Component {
@@ -43,7 +44,7 @@ export default class NewsItem extends Component {
         onPress={onPress}
         onLongPress={this.onLongPress}
         >
-        <View>
+        <Card>
           <Thumbnail
             url={imageUrl}
             titleText={title}
@@ -60,7 +61,7 @@ export default class NewsItem extends Component {
               {description}
             </AppText>
           </View>
-        </View>
+        </Card>
       </TouchableOpacity>
     );
   }

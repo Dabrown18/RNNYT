@@ -13,15 +13,17 @@ export default class Search extends Component {
 
   render() {
     return (
-      <View style={globalStyles.COMMON_STYLES.pageContainer}>
-        <View style={styles.search}>
-          <TextInput
-            style={styles.input}
-            onChangeText={text => this.setState({ searchText: text })}
-            value={this.state.searchText}
-            placeholder={"Search for Hastags and Categories"}
-            placeholderTextColor={globalStyles.MUTED_COLOR}
-          />
+      <View style={styles.searchPage}>
+        <View style={globalStyles.COMMON_STYLES.pageContainer}>
+          <View style={styles.search}>
+            <TextInput
+              style={styles.input}
+              onChangeText={text => this.setState({ searchText: text })}
+              value={this.state.searchText}
+              placeholder={"Search for Hastags and Categories"}
+              placeholderTextColor={globalStyles.MUTED_COLOR}
+            />
+          </View>
         </View>
       </View>
     );
@@ -29,6 +31,10 @@ export default class Search extends Component {
 }
 
 const styles = StyleSheet.create({
+  searchPage: {
+    backgroundColor: '#89b2e0',
+    borderBottomColor: 'black',
+  },
   input: {
     height: 35,
     color: globalStyles.TEXT_COLOR,
