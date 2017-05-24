@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     flex: 1
   },
   headerSection: {
-    flex: 0.9
+    flex: 1.28
   },
   homeSection: {
     flex: 9

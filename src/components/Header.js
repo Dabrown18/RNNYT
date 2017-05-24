@@ -16,10 +16,13 @@ const Header = () => {
 const styles = StyleSheet.create({
   viewStyle: {
     flexDirection: 'row',
-    height: 75,
-    backgroundColor: '#F8F8F8',
+    height: 80,
+    backgroundColor: '#faf8ec',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    shadowColor: '#89b2e0',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.5
   },
   logo: {
     width: 120,

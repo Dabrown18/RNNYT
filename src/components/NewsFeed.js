@@ -103,6 +103,24 @@ NewsFeed.defaultProps = {
       author: 'Pact Publishing',
       location: 'Birmingham, UK',
       url: 'https://www.packtpub.com'
+    },
+    {
+      title: 'React Native',
+      imageUrl: 'https://facebook.github.io/react/img/logo_og.png',
+      description: 'Build Native Mobile Apps using Javascript and React',
+      date: new Date(),
+      author: 'Facebook',
+      location: 'Menlo Park, California',
+      url: 'https://facebook.github.io/react-native'
+    },
+    {
+      title: 'Pact Publishing',
+      imageUrl: 'https://www.packtpub.com/sites/default/files/packt_logo.png',
+      description: 'Stay Relevant',
+      date: new Date(),
+      author: 'Pact Publishing',
+      location: 'Birmingham, UK',
+      url: 'https://www.packtpub.com'
     }
   ]
 };

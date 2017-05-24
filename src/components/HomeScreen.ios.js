@@ -56,6 +56,13 @@ export default class HomeScreen extends Component {
         >
           <Text>Bookmarks</Text>
         </TabBarIOS.Item>
+        <TabBarIOS.Item
+          systemIcon={'contacts'}
+          selected={this.state.tab === 'bookmarks'}
+          onPress={() => this.showBookmarkAlert()}
+        >
+          <Text>Bookmarks</Text>
+        </TabBarIOS.Item>
       </TabBarIOS>
     );
   }
