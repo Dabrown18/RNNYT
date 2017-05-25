@@ -7,7 +7,7 @@ const Header = () => {
     <View style={styles.viewStyle}>
       <Image
         style={styles.logo}
-        source={{uri: 'https://vignette4.wikia.nocookie.net/smurfs/images/a/a1/Netflix-logo.png/revision/latest?cb=20150508223333'}}
+        source={{uri: 'https://upload.wikimedia.org/wikipedia/commons/7/77/The_New_York_Times_logo.png'}}
       />
     </View>
   );
@@ -17,15 +17,15 @@ const styles = StyleSheet.create({
   viewStyle: {
     flexDirection: 'row',
     height: 80,
-    backgroundColor: '#faf8ec',
+    backgroundColor: '#ececec',
     alignItems: 'center',
     justifyContent: 'center',
-    shadowColor: '#89b2e0',
+    shadowColor: 'black',
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.5
   },
   logo: {
-    width: 120,
+    width: 275,
     height: 40,
     alignItems: 'flex-start',
     justifyContent: 'center'

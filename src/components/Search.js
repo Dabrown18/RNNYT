@@ -20,7 +20,7 @@ export default class Search extends Component {
               style={styles.input}
               onChangeText={text => this.setState({ searchText: text })}
               value={this.state.searchText}
-              placeholder={"Search for Hastags and Categories"}
+              placeholder={"Search for Hastags or Categories"}
               placeholderTextColor={globalStyles.MUTED_COLOR}
             />
           </View>
@@ -32,7 +32,7 @@ export default class Search extends Component {
 
 const styles = StyleSheet.create({
   searchPage: {
-    backgroundColor: '#89b2e0',
+    backgroundColor: '#fff',
     borderBottomColor: 'black',
   },
   input: {
