@@ -12,7 +12,8 @@
     "react-native-locale": "0.0.16",
     "react-redux": "^5.0.5",
     "redux": "^3.6.0",
-    "redux-logger": "^3.0.6"
+    "redux-logger": "^3.0.6",
+    "reselect": "^3.0.1"
   },
   "devDependencies": {
     "babel-jest": "20.0.3",
