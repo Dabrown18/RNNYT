@@ -1,12 +1,12 @@
 import { createStore, applyMiddleware, combineReducers } from 'redux';
-import createLogger from 'redux-logger';
+import { createLogger } from 'redux-logger';
 import newsFeedReducer from './reducers/newsFeedReducer';
-import searchTermReducers from './reducers/searchTermReducers';
+import searchTermReducers from './reducers/searchTermReducer';
 
 const logger = createLogger();
 
 export default (initialState = {}) => (
-  createStore()
+  createStore(
     combineReducers({
       news: newsFeedReducer,
       searchTerm: searchTermReducers

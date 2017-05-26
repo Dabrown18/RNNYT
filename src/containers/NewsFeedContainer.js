@@ -1,14 +1,15 @@
-import { container } from 'react-redux';
-import { bindActionCreator } from 'redux';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import { loadNews } from '../actions/newsActions';
 import NewsFeed from '../components/NewsFeed';
+import { reshapeNewsData } from '../util/dataTransformation';
 
 const mapStateToProps = state => ({
-  news: state.news
+  news: reshapeNewsData(state.news)
 });
 
 const mapDispatchToProps = dispatch => (
-  bindActionCreator({
+  bindActionCreators({
     loadNews
   }, dispatch)
 );
