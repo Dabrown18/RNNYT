@@ -3,10 +3,10 @@ import { bindActionCreators } from 'redux';
 import { loadNews } from '../actions/newsActions';
 import NewsFeed from '../components/NewsFeed';
 import { reshapeNewsData } from '../util/dataTransformations';
-import { allNewsSelectors } from '../selectors/newsSelectors';
+import { allNewsSelector } from '../selectors/newsSelectors';
 
 const mapStateToProps = state => ({
-  news: allNewsSelectors(state)
+  news: reshapeNewsData(state.news)
 });
 
 const mapDispatchToProps = dispatch => (

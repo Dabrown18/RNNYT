@@ -41,16 +41,26 @@
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string></string>
 	<key>NSAppTransportSecurity</key>
-	<!--See http://ste.vn/2015/06/10/configuring-app-transport-security-ios-9-osx-10-11/ -->
 	<dict>
 		<key>NSExceptionDomains</key>
 		<dict>
 			<key>localhost</key>
 			<dict>
-				<key>NSExceptionAllowsInsecureHTTPLoads</key>
-				<true/>
+				<key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
+				<true />
+			</dict>
+			<key>nytimes.com</key>
+			<dict>
+				<key>NSIncludesSubdomains</key>
+				<true />
+				<key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
+				<true />
 			</dict>
 		</dict>
+		<key>NSAllowsArbitraryLoadsInWebContent</key>
+		<false/>
+		<key>NSAllowsArbitraryLoads</key>
+		<false/>
 	</dict>
 </dict>
 </plist>

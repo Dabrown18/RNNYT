@@ -1,8 +1,8 @@
 import React, { Component, PropTypes } from 'react';
 import { TabBarIOS, Text, Alert, Vibration, StatusBar } from 'react-native';
-// import NewsFeed from './NewsFeed';
 import NewsFeedContainer from '../containers/NewsFeedContainer';
 import Search from './Search';
+import SearchContainer from '../containers/SearchContainer';
 import * as globalStyles from '../styles/global';
 
 // Set the status bar for iOS to light
@@ -48,7 +48,7 @@ export default class HomeScreen extends Component {
           selected={this.state.tab === 'search'}
           onPress={() => this.setState({ tab: 'search'})}
         >
-          <Search />
+          <SearchContainer />
         </TabBarIOS.Item>
         <TabBarIOS.Item
           systemIcon={'bookmarks'}
