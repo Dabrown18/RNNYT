@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native'
 import { Provider } from 'react-redux';
-import NavContainer from './containers/NavContainer';
+import HomeScreen from './components/HomeScreen';
 import createStore from './createStore';
 import Header from './components/Header';
 
@@ -9,7 +9,14 @@ const store = createStore();
 
 export default () => (
   <Provider store={store}>
-    <NavContainer />
+    <View style={styles.section}>
+      <View style={styles.headerSection}>
+        <Header />
+      </View>
+      <View style={styles.homeSection}>
+        <HomeScreen />
+      </View>
+    </View>
   </Provider>
 );
 
