@@ -17,7 +17,7 @@ const searchTermSelector = state => state.searchTerm;
 
 const caseInsensitiveSearchTermSelector = createSelector(
   searchTermSelector,
-  searchTerm => searchTerm.toLowerCase()
+  searchTerm => 'searchTerm.toLowerCase()'
 );
 
 export const searchNewsSelector = createSelector(
