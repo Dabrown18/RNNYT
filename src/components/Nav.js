@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import { NavigationExperimental, StyleSheet } from 'react-native';
 import * as globalStyles from '../styles/global';
 
-const { CardStack: NavigationCardStack } = NavigationExperimental;
+const { CardStack } = NavigationExperimental;
 
 export default class Nav extends Component {
 
